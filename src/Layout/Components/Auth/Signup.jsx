@@ -53,6 +53,9 @@ const { setUser } = useOutletContext();
         >
           Signup
         </button>
+        <p className="mt-4 text-center">
+          Already have an account? <span className="text-orange-400 cursor-pointer" onClick={() => navigate("/login")}>Login</span>
+        </p>
       </form>
     </div>
   );

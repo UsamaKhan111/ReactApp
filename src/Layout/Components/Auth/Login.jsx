@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 
-function Login() {
-    
+function Login(isLoggedIn) {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-const { user, setIsLoggedIn  } = useOutletContext();
+  const { user, setIsLoggedIn } = useOutletContext();
   const handleSubmit = (e) => {
     e.preventDefault(); // prevent page reload
 
@@ -14,15 +14,22 @@ const { user, setIsLoggedIn  } = useOutletContext();
       setMessage("No user found. Signup first.");
       return;
     }
+    if (isLoggedIn) {
+      navigate("/");
+    }
+
 
     if (email === user.email && password === user.password) {
-        setIsLoggedIn(true);
-      setMessage("Login successful");
+      setIsLoggedIn(true);
       console.log("Logged in:", email);
+
+      navigate("/");
     } else {
       setMessage("Invalid credentials");
     }
   };
+  const navigate = useNavigate();
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black">
@@ -56,7 +63,10 @@ const { user, setIsLoggedIn  } = useOutletContext();
         >
           Login
         </button>
-        {message && <p>{message}</p>}
+        <p className="mt-4 text-center">
+          Don't have an account? <span className="text-orange-400 cursor-pointer" onClick={() => navigate("/signup")}>Signup</span>
+        </p>
+        
       </form>
     </div>
   );

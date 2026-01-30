@@ -1,6 +1,6 @@
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import { useState } from "react";
 
 function Layout() {
@@ -13,7 +13,7 @@ function Layout() {
     localStorage.removeItem("user");
     setUser(null);
     setIsLoggedIn(false);
-    navigate("/");
+    Navigate("/");
   };
   return (
     <>
