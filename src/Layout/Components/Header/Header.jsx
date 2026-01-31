@@ -43,7 +43,7 @@ function Header({ user, isLoggedIn, logout }) {
             </div>
             <div>
                 <div className="bg-orange-400 px-3 py-2 rounded-xl cursor-pointer font-bold">
-                    {!user &&  (
+                    {!user && (
                         <NavLink to="/signup">
                             Signup
                         </NavLink>

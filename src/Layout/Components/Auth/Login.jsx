@@ -8,7 +8,7 @@ function Login(isLoggedIn) {
   const [message, setMessage] = useState("");
   const { user, setIsLoggedIn } = useOutletContext();
   const handleSubmit = (e) => {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault(); 
 
     if (!user) {
       setMessage("No user found. Signup first.");
