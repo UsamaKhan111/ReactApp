@@ -1,21 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+
+import { Link, useOutletContext } from 'react-router-dom'
 import Card from './Components/Cards';
 
 function Home() {
-  const [user, setUser] = useState([]);
-  useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-                setUser(response.data.slice(0,4));
-            } catch (error) {
-                console.log('Error fetching data:', error);
-            }
-        };
-        fetchData();
-    }, []);
+  const { users } = useOutletContext();
   return (
     <>
     <div className=" w-full h-auto">
@@ -28,8 +16,8 @@ function Home() {
         <div className='w-36 h-1 border-b-4 border-orange-300 mt-2 mb-2 rounded-2xl md:mt-4'></div>
       </div>
       <div className='w-full h-auto flex flex-wrap justify-evenly mt-12'>
-          {user.map((user) => (
-            <Card key={user.id} user={user} />
+          {users.slice(0,4).map((users) => (
+            <Card key={users.id} user={users} />
           ))}
       </div>
       <p className='text-orange-950 p-2 rounded-xl mt-2 border-b-2 border-orange-300 bg-orange-500 font-bold '><Link to="/about">More Users</Link></p>

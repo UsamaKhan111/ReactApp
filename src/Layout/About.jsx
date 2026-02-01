@@ -1,27 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+
 import Card from './Components/Cards';
+import { Button } from '../components/ui/button';
+import { Navigate, useNavigate, useOutletContext } from 'react-router-dom';
 
 function About() {
-  const [user, setUser] = useState([]);
-  useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-                setUser(response.data.slice(0,8));
-            } catch (error) {
-                console.log('Error fetching data:', error);
-            }
-        };
-        fetchData();
-    }, []);
+  const navigate = useNavigate();
+  const { users } = useOutletContext();
+  
   return (
     <>
-    <div className='w-full h-auto flex flex-wrap justify-evenly mt-12'>
-              {user.map((user) => (
-                <Card key={user.id} user={user} />
-              ))}
-          </div>
+      <div className='flex flex-col items-center justify-center'>
+        <div className='w-full h-auto flex flex-wrap justify-evenly mt-12'>
+          {users.map((users) => (
+            <Card key={users.id} user={users} />
+          ))}
+        </div>
+        <Button variant="outline" size="lg" className="mt-4 bg-orange-400 mb-8 hover:bg-orange-500 cursor-pointer" onClick = {()=>navigate('/adduser')}>Add New User</Button>
+      </div>
     </>
   )
 }

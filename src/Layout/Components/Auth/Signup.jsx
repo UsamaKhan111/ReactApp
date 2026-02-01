@@ -15,7 +15,6 @@ const { setUser } = useOutletContext();
     localStorage.setItem("user", JSON.stringify(userData));
     setUser(userData);
 
-    // redirect to login
     navigate("/login");
   };
 

@@ -7,6 +7,8 @@ import About from './Layout/About';
 import Contact from './Layout/Contact';
 import Login from './Layout/Components/Auth/Login';
 import Signup from './Layout/Components/Auth/signup';
+import AddUser from './Layout/Components/AddUser';
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +19,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="adduser" element={<AddUser />} />
         </Route>
       </Routes>
     </BrowserRouter>
