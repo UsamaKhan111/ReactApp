@@ -63,6 +63,7 @@ function Login(isLoggedIn) {
         >
           Login
         </button>
+        {message && <p className="mt-4 text-red-500 text-center">{message}</p>}
         <p className="mt-4 text-center">
           Don't have an account? <span className="text-orange-400 cursor-pointer" onClick={() => navigate("/signup")}>Signup</span>
         </p>
