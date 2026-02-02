@@ -11,7 +11,7 @@ function About() {
     <>
       <div className='flex flex-col items-center justify-center'>
         <div className='w-full h-auto flex flex-wrap justify-evenly mt-12'>
-          {users.map((users) => (
+          {users.filter(users=>users.username).map((users) => (
             <Card key={users.id} user={users} />
           ))}
         </div>
