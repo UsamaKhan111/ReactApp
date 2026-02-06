@@ -1,16 +1,113 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ReactApp
 
-Currently, two official plugins are available:
+A starter **React + Vite** application — fast, minimal, and ready for development.  
+This project uses Vite to build and serve a modern React frontend with hot‑module replacement (HMR).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18
+- Vite for fast builds and dev server
+- Hot Module Replacement (HMR)
+- ESLint configured
+- Clean and scalable project structure
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Tech Stack
+
+- **React**
+- **Vite**
+- **JavaScript**
+- **ESLint**
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/UsamaKhan111/ReactApp.git
+cd ReactApp
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The app will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🛠 Available Scripts
+
+| Command | Description |
+|-------|-------------|
+| npm run dev | Start development server |
+| npm run build | Build for production |
+| npm run preview | Preview production build |
+| npm run lint | Run ESLint |
+
+---
+
+## 📁 Project Structure
+
+```
+ReactApp/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 📌 Deployment
+
+This app can be deployed easily on platforms like:
+
+- Vercel
+- Netlify
+- GitHub Pages
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Open a pull request
+
+---
+
+## 🧡 Support
+
+If you like this project, don’t forget to ⭐ star the repository.
+
+---
+
+## 📝 License
+
+MIT License
