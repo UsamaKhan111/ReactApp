@@ -1,8 +1,8 @@
 
 # ReactApp
 
-A starter **React + Vite** application — fast, minimal, and ready for development.  
-This project uses Vite to build and serve a modern React frontend with hot‑module replacement (HMR).
+A starter **React + Vite** application — fast, minimal, with basic features.  
+This project uses Vite to build.
 
 ---
 
@@ -10,9 +10,9 @@ This project uses Vite to build and serve a modern React frontend with hot‑mod
 
 - React 18
 - Vite for fast builds and dev server
-- Hot Module Replacement (HMR)
-- ESLint configured
-- Clean and scalable project structure
+- Signup, Login and Logout using LocalStorage
+- Json Api Cards
+- Add new Cards
 
 ---
 
@@ -21,7 +21,6 @@ This project uses Vite to build and serve a modern React frontend with hot‑mod
 - **React**
 - **Vite**
 - **JavaScript**
-- **ESLint**
 
 ---
 
@@ -54,16 +53,6 @@ http://localhost:5173
 
 ---
 
-## 🛠 Available Scripts
-
-| Command | Description |
-|-------|-------------|
-| npm run dev | Start development server |
-| npm run build | Build for production |
-| npm run preview | Preview production build |
-| npm run lint | Run ESLint |
-
----
 
 ## 📁 Project Structure
 
@@ -83,15 +72,6 @@ ReactApp/
 
 ---
 
-## 📌 Deployment
-
-This app can be deployed easily on platforms like:
-
-- Vercel
-- Netlify
-- GitHub Pages
-
----
 
 ## 🤝 Contributing
 
@@ -107,7 +87,3 @@ This app can be deployed easily on platforms like:
 If you like this project, don’t forget to ⭐ star the repository.
 
 ---
-
-## 📝 License
-
-MIT License
